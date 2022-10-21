@@ -37,6 +37,12 @@ namespace C_Comfy.Repository
             return _context.Reviews.Where(r => r.Pokemon.Id == pokeId).ToList();
         }
 
+        public bool DeleteReview(Review review)
+        {
+            _context.Remove(review);
+            return Save();
+        }
+
         public bool ReviewExists(int reviewId)
         {
             return _context.Reviews.Any(r => r.Id == reviewId);

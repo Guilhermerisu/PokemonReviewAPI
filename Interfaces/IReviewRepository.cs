@@ -10,6 +10,7 @@ namespace C_Comfy.Interfaces
         bool ReviewExists(int reviewId);   
         bool CreateReview(Review review);
         bool UpdateReview(Review review);
+        bool DeleteReview(Review review);
         bool Save();
     }
 }
